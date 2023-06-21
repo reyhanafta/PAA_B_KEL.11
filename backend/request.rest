@@ -1,0 +1,54 @@
+GET http://localhost:5000/users
+
+###
+
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsIm5hbWUiOiJIYW1iYTYiLCJlbWFpbCI6ImhhbWJhNkBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NjY0NzksImV4cCI6MTY4MDg2NjQ5OX0.6Lfbw05ltqDVkPjPIg18DqxCGVzws6Hk9OMp9FXBETc
+
+###
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "example",
+    "email": "example@example.com",
+    "password": "123456",
+    "confPassword": "123456"
+}
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "example@example.com",
+    "password": "123456"
+}
+
+###
+
+GET http://localhost:5000/users/9
+
+###
+
+PATCH http://localhost:5000/users/2
+Content-Type: application/json
+
+{
+    "name": "wijanarko",
+    "email": "wijanarko@example.com",
+}
+
+###
+
+DELETE http://localhost:5000/users/2
+
+### 
+
+GET http://localhost:5000/token
+
+### 
+
+DELETE http://localhost:5000/logout
